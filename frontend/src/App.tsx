@@ -41,6 +41,7 @@ function UseApi() {
   const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
   async function fetchData() {
+    console.log("Fetching from: " + apiBaseUrl);
     const response = await fetch(`${apiBaseUrl}/weatherforecast`);
     const data = await response.json();
     console.log(data);
